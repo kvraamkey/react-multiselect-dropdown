@@ -1,6 +1,6 @@
 {
   "name": "@kvraamkey/react-multiselect-dropdown",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "react multiselect dropdown component for web applications. Easy to integrate and use.",
   "author": "kvraamkey <kvraamkeydev@gmail.com>",
   "license": "MIT",
@@ -61,5 +61,13 @@
   "files": [
     "dist",
     "README.md"
+  ],
+  "keywords": [
+    "react",
+    "dropdown",
+    "multiselectselect",
+    "react-select",
+    "react-multiselect-dropdown",
+    "react-multiselect-selection"
   ]
 }

@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save react-multiselect-dropdown
+npm install --save @kvraamkey/react-multiselect-dropdown
 ```
 
 ## Usage
@@ -15,12 +15,25 @@ npm install --save react-multiselect-dropdown
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-multiselect-dropdown'
+import MultiSelectDropDown from '@kvraamkey/react-multiselect-dropdown'
 
 class Example extends Component {
+  state = {
+    itemList: [
+      { "id": 1, "itemName": "India" },
+      { "id": 2, "itemName": "Singapore" },
+      { "id": 3, "itemName": "Australia" },
+      { "id": 4, "itemName": "Canada" },
+      { "id": 5, "itemName": "South Korea" },
+      { "id": 6, "itemName": "Brazil" }
+    ]
+  }
   render () {
     return (
-      <MyComponent />
+      <MultiSelectDropDown
+        itemList={this.state.itemList}
+        selectedItems={selectedItems => console.log(selectedItems)}
+      />
     )
   }
 }
