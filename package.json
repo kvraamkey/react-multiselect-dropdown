@@ -57,5 +57,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "rollup-plugin-async": "^1.2.0"
+  }
 }
