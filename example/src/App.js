@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import MultiSelectDropDown from 'react-multiselect-dropdown'
+import MultiSelectDropDown from '@kvraamkey/react-multiselect-dropdown'
 
 export default class App extends Component {
   state = {
