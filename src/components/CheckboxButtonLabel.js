@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react'
 
 export const CheckboxButtonLabel = ({ checked, keyId, onChange, textComponent }) => {
   return (
     <React.Fragment>
-      <input type="checkbox"
+      <input type='checkbox'
         id={keyId}
-        checked={(checked) ? true : false}
+        checked={checked}
         onChange={onChange} />
       <label htmlFor={keyId}><span>{textComponent}</span></label>
     </React.Fragment>
-  );
+  )
 }
