@@ -19,9 +19,21 @@ class MultiSelectDropDown extends React.PureComponent {
   }
 
   componentDidMount() {
+    var { selectedItem, primaryKey, itemList, showMenu } = this.props
+
+    if (selectedItem.length > 0) {
+      selectedItem.forEach(selectedItem => {
+        itemList.forEach(item => {
+          if (item[primaryKey] === selectedItem[primaryKey]) {
+            item.isChecked = true
+          }
+        })
+      })
+    }
     this.setState({
-      showMenu: this.props.showMenu,
-      itemList: this.props.itemList
+      showMenu,
+      itemList,
+      selectedItems: selectedItem
     })
   }
 
@@ -190,6 +202,7 @@ MultiSelectDropDown.propTypes = {
   labelKey: PropTypes.string,
   primaryKey: PropTypes.string,
   itemList: PropTypes.array.isRequired,
+  selectedItem: PropTypes.array.isRequired,
   addNewItemOnFilter: PropTypes.bool,
   enableCheckAll: PropTypes.bool,
 
@@ -210,6 +223,7 @@ MultiSelectDropDown.defaultProps = {
   badgeShowLimit: undefined,
   enableCheckAll: true,
   itemList: [],
+  selectedItem: [],
   addNewItemOnFilter: false
 }
 

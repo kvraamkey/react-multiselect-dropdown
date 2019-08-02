@@ -18,7 +18,10 @@ export default class App extends Component {
       <div style={{ width: 500, margin: "0 auto", marginTop: 40 }}>
         <MultiSelectDropDown
           itemList={this.state.itemList}
-          selectedItems={selectedItems => console.log(selectedItems)}
+          selectedItem={[
+            { "id": 1, "itemName": "India" }
+          ]}
+          selectedItems={selectedItems => this.setState({ selectedItems: selectedItems })}
         />
       </div>
     )
