@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@kvraamkey/react-multiselect-dropdown@link:..":
+  version "0.0.0"
+  uid ""
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -6388,10 +6392,6 @@ react-is@^16.8.1:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
-
-"react-multiselect-dropdown@link:..":
-  version "0.0.0"
-  uid ""
 
 react-scripts@^1.1.4:
   version "1.1.5"
