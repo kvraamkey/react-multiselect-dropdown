@@ -60,12 +60,13 @@ class MultiSelectDropDown extends React.PureComponent {
   }
 
   handleRemoveSelectedItem(e = undefined, item) {
+    const { primaryKey } = this.props
     if (e) e.stopPropagation()
 
     let newSelectedItems = this.state.selectedItems.filter(selectedItem => selectedItem !== item)
 
     let newItemList = this.state.itemList.filter(itemList => {
-      if (itemList.id === item.id) {
+      if (itemList[primaryKey] === item[primaryKey]) {
         itemList.isChecked = false
       }
       return itemList
@@ -187,6 +188,7 @@ MultiSelectDropDown.propTypes = {
   searchPlaceholderText: PropTypes.string,
   badgeShowLimit: PropTypes.number,
   labelKey: PropTypes.string,
+  primaryKey: PropTypes.string,
   itemList: PropTypes.array.isRequired,
   addNewItemOnFilter: PropTypes.bool,
   enableCheckAll: PropTypes.bool,
@@ -204,6 +206,7 @@ MultiSelectDropDown.defaultProps = {
   classes: '',
   searchPlaceholderText: 'Search',
   labelKey: 'itemName',
+  primaryKey: 'id',
   badgeShowLimit: undefined,
   enableCheckAll: true,
   itemList: [],
