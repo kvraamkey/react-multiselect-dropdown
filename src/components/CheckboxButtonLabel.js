@@ -6,7 +6,7 @@ export const CheckboxButtonLabel = ({ checked, keyId, onChange, textComponent })
       <input type='checkbox'
         id={keyId}
         checked={checked}
-        onChange={onChange} />
+        onChange={(e) => onChange(e)} />
       <label htmlFor={keyId}><span>{textComponent}</span></label>
     </React.Fragment>
   )

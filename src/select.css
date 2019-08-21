@@ -1,0 +1,246 @@
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.selectedList {
+  display: flex;
+  width: calc(100% - 10px);
+  background: #fff;
+  border: 1px solid #dcdee2;
+  padding: 5px;
+  align-items: center;
+  color: #666;
+  cursor: pointer;
+}
+
+.selectedList>div {
+  display: flex;
+}
+
+.selectedList>.placeholder {
+  flex-grow: 1;
+  color: #dedede;
+  letter-spacing: 1px;
+}
+
+.selectedList>.tags {
+  flex-grow: 1;
+}
+
+.tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.tag {
+  align-items: center;
+  background-color: rgb(230, 230, 230);
+  border-radius: 4px;
+  color: #4a4a4a;
+  display: inline-flex;
+  font-size: .75rem;
+  height: 2em;
+  justify-content: center;
+  line-height: 1.5;
+  white-space: nowrap;
+  margin-right: 4px;
+  margin-top: 2px;
+}
+
+.tag:hover {
+  background-color: rgb(255, 189, 173);
+}
+
+.tag:hover .tag-close>svg {
+  fill: rgb(222, 53, 11)
+}
+
+.tag-label {
+  background-color: #3498db;
+  color: #fff;
+  display: inline-flex;
+  font-size: 12px;
+  height: 2em;
+  letter-spacing: 1px;
+  justify-content: center;
+  line-height: 1.5;
+  padding-left: .75em;
+  padding-right: .75em;
+  white-space: nowrap;
+  border-radius: 4px 0 0 4px;
+  align-items: center;
+}
+
+.tag-close {
+  display: flex;
+  align-items: center;
+  padding: 0 .3em;
+}
+
+.selectedList>.more {
+  flex: none;
+  margin: 0 5px;
+}
+
+.selectedList>.selectIcon {
+  flex: none
+}
+
+.selectedList svg {
+  fill: #666;
+}
+
+
+.list-filter {
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  padding-left: 35px;
+  padding-right: 30px;
+  height: 35px;
+}
+
+.list-filter svg {
+  fill: #888;
+}
+
+.list-filter .c-search {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 15px;
+  height: 15px;
+}
+
+.list-filter .c-clear {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.list-filter input {
+  border: 0px;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 0px;
+  color: rgb(29, 28, 28);
+}
+
+
+.drop-down__menu-box {
+  width: 100%;
+  border: 1px solid #dcdee2;
+  border-top: none;
+  z-index: 1010;
+  background: #fff;
+  transition: transform .2s, opacity .2s, -webkit-transform .2s;
+}
+
+
+.drop-down__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.drop-down__item {
+  user-select: none;
+  border-bottom: 1px solid #ecf0f1;
+  cursor: pointer;
+}
+
+.drop-down__item:last-child {
+  border: none;
+}
+
+
+.hidden-box {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 0;
+}
+
+.check--label {
+  font-size: 15.6px;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  letter-spacing: 0.5;
+  cursor: pointer;
+}
+
+.check--label-box {
+  display: flex;
+  align-self: center;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  border: 2px solid #3498db;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.check--label-text {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  top: 1px;
+  padding-left: 10px;
+  color: #666;
+}
+
+.check--label-text:after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  top: 50%;
+  left: 7.5%;
+  transform: translateY(-50%);
+  transition: width 100ms ease-in-out;
+}
+
+
+.hidden-box:checked+.check--label .check--label-box {
+  background-color: #3498db;
+}
+
+.hidden-box:checked+.check--label .check--label-box:after {
+  content: '';
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 1px;
+  left: 5px;
+  width: 5px;
+  height: 9px;
+  border: 1px solid #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

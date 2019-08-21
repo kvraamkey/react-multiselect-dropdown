@@ -5,23 +5,30 @@ import MultiSelectDropDown from '@kvraamkey/react-multiselect-dropdown'
 export default class App extends Component {
   state = {
     itemList: [
-      { "id": 1, "itemName": "India" },
-      { "id": 2, "itemName": "Singapore" },
-      { "id": 3, "itemName": "Australia" },
-      { "id": 4, "itemName": "Canada" },
-      { "id": 5, "itemName": "South Korea" },
-      { "id": 6, "itemName": "Brazil" }
+      { label: "Connected Car", value: "Connected Car" },
+      { label: "Connected Services", value: "Connected Services" },
+      { label: "Corporate", value: "Corporate" },
+      { label: "Lifestyle Audio", value: "Lifestyle Audio" },
+      { label: "Professional Solutions", value: "Professional Solutions" }
     ]
   }
   render() {
     return (
-      <div style={{ width: 500, margin: "0 auto", marginTop: 40 }}>
+      <div style={{ width: 900, margin: "0 auto", marginTop: 40 }}>
         <MultiSelectDropDown
           itemList={this.state.itemList}
+          enableSearchFilter={false}
+          enableCheckAll
+          // badgeShowLimit={3}
+          labelKey="label"
+          primaryKey="value"
           selectedItem={[
-            { "id": 1, "itemName": "India" }
+            { label: "Connected Car", value: "Connected Car" },
+            { label: "Connected Services", value: "Connected Services" },
+            { label: "Corporate", value: "Corporate" },
+            { label: "Lifestyle Audio", value: "Lifestyle Audio" },
           ]}
-          selectedItems={selectedItems => this.setState({ selectedItems: selectedItems })}
+          selectedItems={selectedItems => console.log(selectedItems)}
         />
       </div>
     )
