@@ -17,16 +17,13 @@ export default class App extends Component {
       <div style={{ width: 900, margin: "0 auto", marginTop: 40 }}>
         <MultiSelectDropDown
           itemList={this.state.itemList}
-          enableSearchFilter={false}
+          enableSearchFilter={true}
           enableCheckAll
           // badgeShowLimit={3}
           labelKey="label"
           primaryKey="value"
           selectedItem={[
-            { label: "Connected Car", value: "Connected Car" },
-            { label: "Connected Services", value: "Connected Services" },
-            { label: "Corporate", value: "Corporate" },
-            { label: "Lifestyle Audio", value: "Lifestyle Audio" },
+            { label: "Connected Car", value: "Connected Car" }
           ]}
           selectedItems={selectedItems => console.log(selectedItems)}
         />
