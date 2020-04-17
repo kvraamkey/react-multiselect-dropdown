@@ -10,11 +10,18 @@ export default class App extends Component {
       { label: "Corporate", value: "Corporate" },
       { label: "Lifestyle Audio", value: "Lifestyle Audio" },
       { label: "Professional Solutions", value: "Professional Solutions" }
-    ]
+    ],
+    isClear: false
+  }
+  reset = () => {
+    this.setState({ isClear: true });
   }
   render() {
     return (
       <div style={{ width: 900, margin: "0 auto", marginTop: 40 }}>
+
+        <button onClick={() => this.reset()}>reset</button>
+
         <MultiSelectDropDown
           itemList={this.state.itemList}
           enableSearchFilter={true}
@@ -22,10 +29,13 @@ export default class App extends Component {
           // badgeShowLimit={3}
           labelKey="label"
           primaryKey="value"
-          selectedItem={[
-            { label: "Connected Car", value: "Connected Car" }
-          ]}
-          selectedItems={selectedItems => console.log(selectedItems)}
+          selectedItem={[]}
+          selectedItems={selectedItems => {
+            console.log(selectedItems)
+            if (selectedItems.length === 0) {
+              this.setState({ isClear: false })
+            }
+          }}
         />
       </div>
     )
