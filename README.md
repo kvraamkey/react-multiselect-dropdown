@@ -1,24 +1,31 @@
-# react-multiselect-dropdown
 
-> 
 
-[![NPM](https://img.shields.io/npm/v/react-multiselect-dropdown.svg)](https://www.npmjs.com/package/react-multiselect-dropdown) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+# React Multiselect Dropdown with Limit
 
-## Install
+## Installing / Getting started
 
-```bash
-npm install --save @kvraamkey/react-multiselect-dropdown
+This package is available in npm repository as @kvraamkey/react-multiselect-dropdown. It will work correctly with all popular bundlers.
+
 ```
+npm install @kvraamkey/react-multiselect-dropdown --save
+
+[using Yarn]
+
+yarn add @kvraamkey/react-multiselect-dropdown -s
+```
+
+## Include the Component
+
+To start using MultiSelectDropDown you just need to import the component from the @kvraamkey/react-multiselect-dropdown package.
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
-
+import React, { Component } from 'react';
 import MultiSelectDropDown from '@kvraamkey/react-multiselect-dropdown'
 
 class Example extends Component {
-  state = {
+    state = {
     itemList: [
       { "id": 1, "itemName": "India" },
       { "id": 2, "itemName": "Singapore" },
@@ -39,6 +46,23 @@ class Example extends Component {
 }
 ```
 
-## License
+## PropTypes
+
+| Prop | Type | Default |
+| ---- | ---- | ------- |
+| badgeShowLimit | Integer | undefined |
+| primaryKey | String | value |
+| labelKey | String | label |
+| enableCheckAll | Boolean | true |
+| enableSearchFilter | Boolean | true |
+| placeHolderText | String | Select |
+| selectAllText | String | Select All |
+| unSelectAllText | String | UnSelect All |
+| enableCheckAll | Boolean | true |
+
+
+## Licensing
+
+The code in this project is licensed under MIT license.
 
 MIT © [kvraamkey](https://github.com/kvraamkey)

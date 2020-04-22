@@ -14,6 +14,7 @@ export default class App extends Component {
     isClear: false
   }
   reset = () => {
+    console.log('reset', this.state.isClear);
     this.setState({ isClear: true });
   }
   render() {
@@ -27,6 +28,7 @@ export default class App extends Component {
           enableSearchFilter={true}
           enableCheckAll
           // badgeShowLimit={3}
+          reset={this.state.isClear}
           labelKey="label"
           primaryKey="value"
           selectedItem={[]}

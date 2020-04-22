@@ -238,8 +238,7 @@ MultiSelectDropDown.defaultProps = {
   enableSearchFilter: true,
   placeHolderText: 'Select',
   selectAllText: 'Select All',
-  unSelectAllText: 'UnSelect All',
-  enableSearchFilter: true,
+  unSelectAllText: 'UnSelect All'
 }
 
 export default MultiSelectDropDown
