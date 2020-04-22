@@ -2,7 +2,7 @@
 
 # React Multiselect Dropdown with Limit
 
-## Installing / Getting started
+### Installing / Getting started
 
 This package is available in npm repository as @kvraamkey/react-multiselect-dropdown. It will work correctly with all popular bundlers.
 
@@ -14,11 +14,11 @@ npm install @kvraamkey/react-multiselect-dropdown --save
 yarn add @kvraamkey/react-multiselect-dropdown -s
 ```
 
-## Include the Component
+### Include the Component
 
 To start using MultiSelectDropDown you just need to import the component from the @kvraamkey/react-multiselect-dropdown package.
 
-## Usage
+### Usage
 
 ```jsx
 import React, { Component } from 'react';
@@ -46,7 +46,7 @@ class Example extends Component {
 }
 ```
 
-## PropTypes
+### PropTypes
 
 | Prop | Type | Default |
 | ---- | ---- | ------- |
@@ -61,7 +61,7 @@ class Example extends Component {
 | enableCheckAll | Boolean | true |
 
 
-## Licensing
+### Licensing
 
 The code in this project is licensed under MIT license.
 
